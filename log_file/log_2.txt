@@ -1,0 +1,426 @@
+[2023-12-08 18:33:10 UTC] vlib work && vlog -writetoplevels questa.tops '-timescale' '1ns/1ns' design.sv testbench.sv  && vsim -f questa.tops -batch -do "vsim ; run -all; exit"  
+QuestaSim-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+Start time: 13:33:11 on Dec 08,2023
+vlog -writetoplevels questa.tops -timescale 1ns/1ns design.sv testbench.sv 
+-- Compiling module ALU
+-- Compiling package alu_pkg
+-- Compiling package testbench_sv_unit
+-- Importing package alu_pkg
+-- Compiling interface aluifc
+-- Compiling program test
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+End time: 13:33:11 on Dec 08,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+# vsim testbench -batch -do "vsim ; run -all; exit" 
+# Start time: 13:33:11 on Dec 08,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.3 linux_x86_64 Jul 13 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.testbench(fast)
+# Loading work.test(fast)
+# Loading work.ALU(fast)
+# Loading work.aluifc(fast)
+# 
+# vsim 
+# run -all
+# [ monitor ] alu_in_a = 19 , alu_in_b = 03 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 1b , Actual:: alu_out = 1b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+############################################### reset #############################################
+#  
+# [ monitor ] alu_in_a = 11 , alu_in_b = 42 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 ---------------------------------------------->>>>>>> outputs at reset
+# 
+# [ monitor ] alu_in_a = f0 , alu_in_b = fb , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f4 , Actual:: alu_out = f4 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 25 , alu_in_b = 3b , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 3f , Actual:: alu_out = 3f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 49 , alu_in_b = 51 , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = be , Actual:: alu_out = be , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = ee , alu_in_b = c3 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 10 , Actual:: alu_out = 10 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 6c , alu_in_b = 45 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 44 , Actual:: alu_out = 44 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 8d , alu_in_b = ea , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 98 , Actual:: alu_out = 98 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 40 , alu_in_b = 4d , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = d , Actual:: alu_out = d , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 1f , alu_in_b = b1 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = ae , Actual:: alu_out = ae , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 3c , alu_in_b = 6f , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 2c , Actual:: alu_out = 2c , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 81 , alu_in_b = e5 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 81 , Actual:: alu_out = 81 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = ad , alu_in_b = 2e , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 7c , Actual:: alu_out = 7c , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 18 , alu_in_b = 67 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 7f , Actual:: alu_out = 7f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 2c , alu_in_b = f0 , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 3 , Actual:: alu_out = 3 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = dc , alu_in_b = e4 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = fc , Actual:: alu_out = fc , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 0b , alu_in_b = 6b , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = b , Actual:: alu_out = b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 27 , alu_in_b = c1 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 19 , Actual:: alu_out = 19 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 71 , alu_in_b = bf , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = ce , Actual:: alu_out = ce , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 03 , alu_in_b = 09 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = b , Actual:: alu_out = b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = 83 , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 83 , Actual:: alu_out = 83 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = ff , Actual:: alu_out = ff , Expected alu_irq = 0 , Actual alu_irq = 1 ----------------------------------------->>>>> fail
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = 83 , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 83 , Actual:: alu_out = 83 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# ** Error: (vsim-8565) Illegal state bin was hit at value=5631. The bin counter for the illegal bin '\/testbench/cov_in_h .in_a_op_a.nand_in_a_ff' is 1.
+#    Time: 495 ns  Iteration: 3  Instance: /testbench
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# ** Error: (vsim-8565) Illegal state bin was hit at value=5631. The bin counter for the illegal bin '\/testbench/cov_in_h .in_a_op_a.nand_in_a_ff' is 2.
+#    Time: 535 ns  Iteration: 3  Instance: /testbench
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = ff , Actual:: alu_out = ff , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 0 , alu_op_a = or_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = f0 , alu_in_b = f8 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f8 , Actual:: alu_out = f8 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode a 
+# ** Error: (vsim-8565) Illegal state bin was hit at value=5631. The bin counter for the illegal bin '\/testbench/cov_in_h .in_a_op_a.nand_in_a_ff' is 3.
+#    Time: 695 ns  Iteration: 3  Instance: /testbench
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 0 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode a 
+# [ monitor ] alu_in_a = ff , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-FAIL]    Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = f4 , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0a , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = a , Actual:: alu_out = a , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f1 , Actual:: alu_out = f1 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = f4 , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-FAIL]    Expected:: alu_out = ff , Actual:: alu_out = ff , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = ff , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = ff , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = f4 , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f4 , Actual:: alu_out = f4 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0a , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = a , Actual:: alu_out = a , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f1 , Actual:: alu_out = f1 , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0a , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = e , Actual:: alu_out = e , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = ff , alu_in_b = 00 , alu_irq_clr = 0 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f1 , Actual:: alu_out = f1 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = ff , alu_in_b = 00 , alu_irq_clr = 0 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = ff , alu_in_b = 00 , alu_irq_clr = 0 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0a , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f5 , Actual:: alu_out = f5 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = f4 , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = ff , Actual:: alu_out = ff , Expected alu_irq = 1 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = 0e , alu_in_b = 00 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-FAIL]    Expected:: alu_out = f1 , Actual:: alu_out = f1 , Expected alu_irq = 0 , Actual alu_irq = 1 
+# 
+#  irq for operation mode b 
+# [ monitor ] alu_in_a = f4 , alu_in_b = ff , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 63 , alu_in_b = 93 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = f0 , Actual:: alu_out = f0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = e3 , alu_in_b = de , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 3d , Actual:: alu_out = 3d , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 08 , alu_in_b = 6d , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 92 , Actual:: alu_out = 92 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 2d , alu_in_b = 06 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 2f , Actual:: alu_out = 2f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 52 , alu_in_b = 4c , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 40 , Actual:: alu_out = 40 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = fb , alu_in_b = cb , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = fb , Actual:: alu_out = fb , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = c4 , alu_in_b = bf , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 0b , alu_in_b = 60 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 6b , Actual:: alu_out = 6b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = ab , alu_in_b = 94 , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 7f , Actual:: alu_out = 7f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 32 , alu_in_b = 95 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = b7 , Actual:: alu_out = b7 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = bc , alu_in_b = a0 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = bc , Actual:: alu_out = bc , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 07 , alu_in_b = 38 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 3f , Actual:: alu_out = 3f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 8a , alu_in_b = df , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 8a , Actual:: alu_out = 8a , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = cf , alu_in_b = d4 , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 1b , Actual:: alu_out = 1b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = b6 , alu_in_b = dd , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 6b , Actual:: alu_out = 6b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 79 , alu_in_b = 71 , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 79 , Actual:: alu_out = 79 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = dd , alu_in_b = 8d , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = af , Actual:: alu_out = af , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = b8 , alu_in_b = 40 , alu_irq_clr = 0 , alu_op_a = and_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = fd , alu_in_b = 2a , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 28 , Actual:: alu_out = 28 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = f8 , alu_in_b = 2b , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 4 , Actual:: alu_out = 4 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [PASSED] = 70 , [FAILED] = 10  
+#  
+# Coverage of cov_op_a = 100.00% 
+# 
+# Coverage of cov_op_b = 100.00% 
+# 
+# Coverage of cov_in   = 100.00% 
+# 
+# Coverage of cov_out  = 54.17% 
+# 
+# ** Note: $finish    : testbench.sv(166)
+#    Time: 1595 ns  Iteration: 3  Instance: /testbench
+# End time: 13:33:12 on Dec 08,2023, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+Done

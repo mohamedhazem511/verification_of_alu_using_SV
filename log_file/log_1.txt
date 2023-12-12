@@ -1,0 +1,394 @@
+[2023-12-08 18:31:52 UTC] vlib work && vlog -writetoplevels questa.tops '-timescale' '1ns/1ns' design.sv testbench.sv  && vsim -f questa.tops -batch -do run.do  
+QuestaSim-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+Start time: 13:31:52 on Dec 08,2023
+vlog -writetoplevels questa.tops -timescale 1ns/1ns design.sv testbench.sv 
+-- Compiling module ALU
+-- Compiling package alu_pkg
+-- Compiling package testbench_sv_unit
+-- Importing package alu_pkg
+-- Compiling interface aluifc
+-- Compiling program test
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+End time: 13:31:52 on Dec 08,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+# vsim testbench -batch -do "run.do" 
+# Start time: 13:31:52 on Dec 08,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.3 linux_x86_64 Jul 13 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.testbench(fast)
+# Loading work.test(fast)
+# Loading work.ALU(fast)
+# Loading work.aluifc(fast)
+# 
+# do run.do
+# [ monitor ] alu_in_a = 19 , alu_in_b = 03 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = and_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 1b , Actual:: alu_out = 1b , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+############################################### reset #############################################
+#  
+# [ monitor ] alu_in_a = 11 , alu_in_b = 42 , alu_irq_clr = 1 , alu_op_a = or_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = 0 , Actual:: alu_out = 0 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = f0 , alu_in_b = fb , alu_irq_clr = 1 , alu_op_a = xor_a , alu_op_b = xnor_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = f4 , Actual:: alu_out = f4 , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 25 , alu_in_b = 3b , alu_irq_clr = 1 , alu_op_a = and_a , alu_op_b = or_b , alu_operation_mode  = operation_mode_b 
+# 
+# [SCB-PASS] Expected:: alu_out = 3f , Actual:: alu_out = 3f , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# [ monitor ] alu_in_a = 49 , alu_in_b = 51 , alu_irq_clr = 1 , alu_op_a = nand_a , alu_op_b = nor_b , alu_operation_mode  = operation_mode_a 
+# 
+# [SCB-PASS] Expected:: alu_out = be , Actual:: alu_out = be , Expected alu_irq = 0 , Actual alu_irq = 0 
+# 
+# Coverage Report by instance with details
+# 
+# =================================================================================
+# === Instance: /testbench
+# === Design Unit: work.testbench
+# =================================================================================
+# 
+# Covergroup Coverage:
+#     Covergroups                      4        na        na    63.54%
+#         Coverpoints/Crosses          8        na        na        na
+#             Covergroup Bins         36        11        25    30.55%
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /testbench/cov_op_a                             100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint op_a                                   100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#  Covergroup instance \/testbench/cov_op_a_h           100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint op_a                                   100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin AND_a                                           1          1          -    Covered              
+#         bin NAND_a                                          1          1          -    Covered              
+#         bin OR_a                                            1          1          -    Covered              
+#         bin XOR_a                                           2          1          -    Covered              
+#  TYPE /testbench/cov_op_b                              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint op_b                                    75.00%        100          -    Uncovered            
+#         covered/total bins:                                 3          4          -                      
+#         missing/total bins:                                 1          4          -                      
+#         % Hit:                                         75.00%        100          -                      
+#  Covergroup instance \/testbench/cov_op_b_h            75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint op_b                                    75.00%        100          -    Uncovered            
+#         covered/total bins:                                 3          4          -                      
+#         missing/total bins:                                 1          4          -                      
+#         % Hit:                                         75.00%        100          -                      
+#         bin XNOR_b                                          2          1          -    Covered              
+#         bin AND_b                                           0          1          -    ZERO                 
+#         bin NOR_b                                           2          1          -    Covered              
+#         bin OR_b                                            1          1          -    Covered              
+#  TYPE /testbench/cov_in                                75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint in_a_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_b_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_a_op_b                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_b_op_b                                0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#  Covergroup instance \/testbench/cov_in_h              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint in_a_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin nand_in_a_ff                            0                     -    ZERO                 
+#         bin in_a_op_a                                       1          1          -    Covered              
+#     Coverpoint in_b_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin and_in_b_00                             0                     -    ZERO                 
+#         illegal_bin nand_in_b_03                            0                     -    ZERO                 
+#         bin in_b_op_a                                       1          1          -    Covered              
+#     Coverpoint in_a_op_b                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin nor_in_a                                0                     -    ZERO                 
+#         bin in_a_op_b                                       1          1          -    Covered              
+#     Coverpoint in_b_op_b                                0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         illegal_bin and_in_b                                0                     -    ZERO                 
+#         bin in_b_op_b                                       0          1          -    ZERO                 
+#  TYPE /testbench/cov_out                                4.16%        100          -    Uncovered            
+#     covered/total bins:                                     1         24          -                      
+#     missing/total bins:                                    23         24          -                      
+#     % Hit:                                              4.16%        100          -                      
+#     Coverpoint out_a                                    0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0         12          -                      
+#         missing/total bins:                                12         12          -                      
+#         % Hit:                                          0.00%        100          -                      
+#     Coverpoint out_b                                    8.33%        100          -    Uncovered            
+#         covered/total bins:                                 1         12          -                      
+#         missing/total bins:                                11         12          -                      
+#         % Hit:                                          8.33%        100          -                      
+#  Covergroup instance \/testbench/cov_out_h              4.16%        100          -    Uncovered            
+#     covered/total bins:                                     1         24          -                      
+#     missing/total bins:                                    23         24          -                      
+#     % Hit:                                              4.16%        100          -                      
+#     Coverpoint out_a                                    0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0         12          -                      
+#         missing/total bins:                                12         12          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin out_min_and_a                                   0          1          -    ZERO                 
+#         bin out_max_and_a                                   0          1          -    ZERO                 
+#         bin out_min_nand_a                                  0          1          -    ZERO                 
+#         bin out_max_nand_a                                  0          1          -    ZERO                 
+#         bin out_min_or_a                                    0          1          -    ZERO                 
+#         bin out_max_or_a                                    0          1          -    ZERO                 
+#         bin out_min_xor_a                                   0          1          -    ZERO                 
+#         bin out_max_xor_a                                   0          1          -    ZERO                 
+#         bin out_and_a_irq                                   0          1          -    ZERO                 
+#         bin out_nand_a_irq                                  0          1          -    ZERO                 
+#         bin out_or_a_irq                                    0          1          -    ZERO                 
+#         bin out_xor_a_irq                                   0          1          -    ZERO                 
+#         default bin other_a                                 5                     -    Occurred             
+#     Coverpoint out_b                                    8.33%        100          -    Uncovered            
+#         covered/total bins:                                 1         12          -                      
+#         missing/total bins:                                11         12          -                      
+#         % Hit:                                          8.33%        100          -                      
+#         bin out_min_xnor_b                                  1          1          -    Covered              
+#         bin out_max_xnor_b                                  0          1          -    ZERO                 
+#         bin out_min_and_b                                   0          1          -    ZERO                 
+#         bin out_max_and_b                                   0          1          -    ZERO                 
+#         bin out_min_nor_b                                   0          1          -    ZERO                 
+#         bin out_max_nor_b                                   0          1          -    ZERO                 
+#         bin out_min_or_b                                    0          1          -    ZERO                 
+#         bin out_max_or_b                                    0          1          -    ZERO                 
+#         bin out_xnor_b_irq                                  0          1          -    ZERO                 
+#         bin out_and_b_irq                                   0          1          -    ZERO                 
+#         bin out_nor_b_irq                                   0          1          -    ZERO                 
+#         bin out_or_b_irq                                    0          1          -    ZERO                 
+#         default bin other_b                                 4                     -    Occurred             
+# 
+# =================================================================================
+# === Instance: /testbench_sv_unit
+# === Design Unit: work.testbench_sv_unit
+# =================================================================================
+# 
+# Assertion Coverage:
+#     Assertions                       1         1         0   100.00%
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /testbench_sv_unit/generator/main/#ublk#41483716#30/immed__32
+#                      generator.sv(32)                   0          1
+# 
+# COVERGROUP COVERAGE:
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /testbench/cov_op_a                             100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint op_a                                   100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#  Covergroup instance \/testbench/cov_op_a_h           100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint op_a                                   100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin AND_a                                           1          1          -    Covered              
+#         bin NAND_a                                          1          1          -    Covered              
+#         bin OR_a                                            1          1          -    Covered              
+#         bin XOR_a                                           2          1          -    Covered              
+#  TYPE /testbench/cov_op_b                              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint op_b                                    75.00%        100          -    Uncovered            
+#         covered/total bins:                                 3          4          -                      
+#         missing/total bins:                                 1          4          -                      
+#         % Hit:                                         75.00%        100          -                      
+#  Covergroup instance \/testbench/cov_op_b_h            75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint op_b                                    75.00%        100          -    Uncovered            
+#         covered/total bins:                                 3          4          -                      
+#         missing/total bins:                                 1          4          -                      
+#         % Hit:                                         75.00%        100          -                      
+#         bin XNOR_b                                          2          1          -    Covered              
+#         bin AND_b                                           0          1          -    ZERO                 
+#         bin NOR_b                                           2          1          -    Covered              
+#         bin OR_b                                            1          1          -    Covered              
+#  TYPE /testbench/cov_in                                75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint in_a_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_b_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_a_op_b                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#     Coverpoint in_b_op_b                                0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#  Covergroup instance \/testbench/cov_in_h              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     3          4          -                      
+#     missing/total bins:                                     1          4          -                      
+#     % Hit:                                             75.00%        100          -                      
+#     Coverpoint in_a_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin nand_in_a_ff                            0                     -    ZERO                 
+#         bin in_a_op_a                                       1          1          -    Covered              
+#     Coverpoint in_b_op_a                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin and_in_b_00                             0                     -    ZERO                 
+#         illegal_bin nand_in_b_03                            0                     -    ZERO                 
+#         bin in_b_op_a                                       1          1          -    Covered              
+#     Coverpoint in_a_op_b                              100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         illegal_bin nor_in_a                                0                     -    ZERO                 
+#         bin in_a_op_b                                       1          1          -    Covered              
+#     Coverpoint in_b_op_b                                0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         illegal_bin and_in_b                                0                     -    ZERO                 
+#         bin in_b_op_b                                       0          1          -    ZERO                 
+#  TYPE /testbench/cov_out                                4.16%        100          -    Uncovered            
+#     covered/total bins:                                     1         24          -                      
+#     missing/total bins:                                    23         24          -                      
+#     % Hit:                                              4.16%        100          -                      
+#     Coverpoint out_a                                    0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0         12          -                      
+#         missing/total bins:                                12         12          -                      
+#         % Hit:                                          0.00%        100          -                      
+#     Coverpoint out_b                                    8.33%        100          -    Uncovered            
+#         covered/total bins:                                 1         12          -                      
+#         missing/total bins:                                11         12          -                      
+#         % Hit:                                          8.33%        100          -                      
+#  Covergroup instance \/testbench/cov_out_h              4.16%        100          -    Uncovered            
+#     covered/total bins:                                     1         24          -                      
+#     missing/total bins:                                    23         24          -                      
+#     % Hit:                                              4.16%        100          -                      
+#     Coverpoint out_a                                    0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0         12          -                      
+#         missing/total bins:                                12         12          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin out_min_and_a                                   0          1          -    ZERO                 
+#         bin out_max_and_a                                   0          1          -    ZERO                 
+#         bin out_min_nand_a                                  0          1          -    ZERO                 
+#         bin out_max_nand_a                                  0          1          -    ZERO                 
+#         bin out_min_or_a                                    0          1          -    ZERO                 
+#         bin out_max_or_a                                    0          1          -    ZERO                 
+#         bin out_min_xor_a                                   0          1          -    ZERO                 
+#         bin out_max_xor_a                                   0          1          -    ZERO                 
+#         bin out_and_a_irq                                   0          1          -    ZERO                 
+#         bin out_nand_a_irq                                  0          1          -    ZERO                 
+#         bin out_or_a_irq                                    0          1          -    ZERO                 
+#         bin out_xor_a_irq                                   0          1          -    ZERO                 
+#         default bin other_a                                 5                     -    Occurred             
+#     Coverpoint out_b                                    8.33%        100          -    Uncovered            
+#         covered/total bins:                                 1         12          -                      
+#         missing/total bins:                                11         12          -                      
+#         % Hit:                                          8.33%        100          -                      
+#         bin out_min_xnor_b                                  1          1          -    Covered              
+#         bin out_max_xnor_b                                  0          1          -    ZERO                 
+#         bin out_min_and_b                                   0          1          -    ZERO                 
+#         bin out_max_and_b                                   0          1          -    ZERO                 
+#         bin out_min_nor_b                                   0          1          -    ZERO                 
+#         bin out_max_nor_b                                   0          1          -    ZERO                 
+#         bin out_min_or_b                                    0          1          -    ZERO                 
+#         bin out_max_or_b                                    0          1          -    ZERO                 
+#         bin out_xnor_b_irq                                  0          1          -    ZERO                 
+#         bin out_and_b_irq                                   0          1          -    ZERO                 
+#         bin out_nor_b_irq                                   0          1          -    ZERO                 
+#         bin out_or_b_irq                                    0          1          -    ZERO                 
+#         default bin other_b                                 4                     -    Occurred             
+# 
+# TOTAL COVERGROUP COVERAGE: 63.54%  COVERGROUP TYPES: 4
+# 
+# ASSERTION RESULTS:
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /testbench_sv_unit/generator/main/#ublk#41483716#30/immed__32
+#                      generator.sv(32)                   0          1
+# 
+# Total Coverage By Instance (filtered view): 81.77%
+# 
+# 
+# End time: 13:31:54 on Dec 08,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+Done
