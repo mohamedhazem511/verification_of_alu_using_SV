@@ -25,10 +25,12 @@
 
    # Verification Environment Hierarchical
 
-   ![alu_env](https://github.com/mohamedhazem511/verification_of_alu_using_SV/assets/114261199/92eec0cc-04ca-4b8a-86d4-e810111bec96)
+   ![alu_env](https://github.com/mohamedhazem511/verification_of_alu_using_SV/assets/114261199/7d0d8de5-afd1-476c-b362-3b9ac6dd3cc7)
+
 
 
 
    # ALU
        
-   ![alu](https://github.com/mohamedhazem511/verification_of_alu_using_SV/assets/114261199/5db245ca-2a65-4184-bcb1-356c201b5422)
+  ![alu](https://github.com/mohamedhazem511/verification_of_alu_using_SV/assets/114261199/cf7b3180-e082-4d1c-8373-7de2df1ea403)
+
